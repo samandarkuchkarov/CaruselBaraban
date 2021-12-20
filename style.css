@@ -11,6 +11,10 @@
     /* если что-то не помещается на своё место — скрываем то, что не поместилось */
     overflow: hidden;
     font-family: sans-serif;
+    background-image: url('./assets/Frame\ 2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   /* общий блок для всех элементов */
@@ -242,6 +246,7 @@
   padding: 20px 40px;
   margin-top: 20px;
   background-color: #E5474C  ;
+  cursor: pointer;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -251,10 +256,40 @@
 .submit p{
   margin: 0;
   color: #fff;
-  cursor: pointer;
 }
-  @media (max-width:500px) {
+@media (max-width:1041px) {
+  body{
+    background-size: 1200px
+  }
+}
+@media (max-width:839px) {
+  body{
+    background-size: 1100px
+  }
+}
+  @media (max-width:600px) {
     .deal-wheel{
       font-size: 12px;
+    }
+    .form{
+      width: 320px;
+    }
+    body{
+      background-size: 790px;
+    }
+  }
+  @media (max-width:500px) {
+    body{
+      background-size: 658px;
+    }
+  }
+  @media (max-width:435px) {
+    body{
+      background-size: 658px;
+    }
+  }
+  @media (max-width:435px) {
+    body{
+      background-size: 558px;
     }
   }
