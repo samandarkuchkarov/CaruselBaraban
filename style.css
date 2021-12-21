@@ -86,7 +86,6 @@
     /* включаем «гибкую» вёрстку */
     display: flex;
     align-items: center;
-    justify-content: center;
     /* задаём отступы от краёв блока */
     padding: 0 calc(var(--size) / 6) 0 calc(var(--size) / 20);
     /* устанавливаем размеры */
@@ -108,13 +107,14 @@
     left: calc(var(--size) / -15);
     width: calc(var(--size) / 10);
     height: calc(var(--size) / 20);
-    background-color: #E5474C !important;
-    border: 1px solid #fff;
-    /* делаем так, чтобы язычок был выше колеса */
+    background-image: url('./assets/tracer.png');
+    transform: rotate(90deg);
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 94px;
     z-index: 1;
-    /* форма язычка */
-    clip-path: polygon(20% 0, 100% 50%, 20% 100%, 0% 50%);
-    /* устанавливаем точку, относительно которой будет вращаться язычок при движении колеса */
     transform-origin: center left;
   }
   
@@ -155,12 +155,8 @@
   /* эффект, когда колесо задевает язычок при вращении */
   @keyframes tick {
     40% {
-      /*чутьповорачиваемязычокнаверхвсерединеанимации*/transform: rotate(-12deg);
-      -webkit-transform: rotate(-12deg);
-      -moz-transform: rotate(-12deg);
-      -ms-transform: rotate(-12deg);
-      -o-transform: rotate(-12deg);
-}
+      transform: rotate(70deg);
+    }
   }
   
   /* анимируем выпавший сектор */
@@ -253,10 +249,15 @@
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
+.back2{
+  background-image: url('./assets/back2.png');
+  background-size: contain !important;
+}
 .submit p{
   margin: 0;
   color: #fff;
 }
+
 @media (max-width:1041px) {
   body{
     background-size: 1200px
@@ -266,6 +267,7 @@
   body{
     background-size: 1100px
   }
+
 }
   @media (max-width:600px) {
     .deal-wheel{
@@ -288,8 +290,12 @@
       background-size: 658px;
     }
   }
-  @media (max-width:435px) {
+  @media (max-width:380px) {
     body{
-      background-size: 558px;
+      background-size: 535px;
+      background-image: none;
+    }
+    .back2{
+      background-image: none;
     }
   }
